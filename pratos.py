@@ -9,9 +9,17 @@ prato_secreto = random.choice(pratos)
 tentativa = 0
 ficha = 5
 
-if prato_secreto == pratos[0] or pratos[1] or pratos[2]:
+if prato_secreto == pratos[0]:
     print("\nÉ um prato típico da culinária italiana! E não é pizza!\n")
-elif prato_secreto == pratos[3] or pratos[4] or pratos[5]:
+elif prato_secreto == pratos[1]:
+    print("\nÉ um prato típico da culinária italiana! E não é pizza!\n")
+elif prato_secreto == pratos[2]:
+    print("\nÉ um prato típico da culinária italiana! E não é pizza!\n")
+elif prato_secreto == pratos[3]:
+    print("\nÉ um prato típico da culinária brasileira! E não é churrasco!\n")
+elif prato_secreto == pratos[4]:
+    print("\nÉ um prato típico da culinária brasileira! E não é churrasco!\n")
+elif prato_secreto == pratos[5]:
     print("\nÉ um prato típico da culinária brasileira! E não é churrasco!\n")
 
 print("Você terá 5 chances para acertar!\n\nVamos começar!")
