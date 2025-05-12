@@ -4,8 +4,8 @@ print(30*"-")
 print("Vamos jogar Adivinhe o prato!")
 print(30*"-")
 
-pratos = ["Gnocchi","Carbonara","Puttanesca","Feijoada","Baião-de-dois","Pastel com Caldo"]
-prato_secreto = random.sample(pratos,1)
+pratos = ['Gnocchi','Carbonara','Puttanesca','Feijoada','Baião-de-dois','Pastel com Caldo']
+prato_secreto = random.choice(pratos)
 tentativa = 0
 ficha = 5
 
@@ -18,18 +18,17 @@ print("Você terá 5 chances para acertar!\n\nVamos começar!")
 
 
 
-while tentativa <= ficha:
+while tentativa < ficha:
     tentativa += 1
     
-    print(f"\nTentativa {tentativa} de {ficha}")
+    print(f"Você tem {tentativa} de {ficha})
     palpite = input("\nQual o prato você acha que é?\n")
 
-    if palpite !=
-    elif palpite == prato_secreto:
+    if palpite == prato_secreto:
         print("\nUAU! Você é bom nisso!\nParabéns você acertou o prato secreto:", prato_secreto)
         break
     else:
-        print("\nPoxa! Você não acertou! Vamos tentar de novo!")
+        print("\nPoxa! Você não acertou! Vamos tentar de novo!\n")
         
 
 print("\nQue pena! Você não acertou, o prato secreto era:",prato_secreto)
