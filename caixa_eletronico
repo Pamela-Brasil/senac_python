@@ -1,0 +1,67 @@
+
+titular = ()
+saldo = []
+historico = []
+sum(saldo)
+
+print(30*"*")
+print("Olá, bem-vindo(a) ao SeuBank!")
+print(30*"*")
+
+nome = input("\nComece inserindo o seu nome:\n")
+
+
+titular = (nome,)
+print(f"\nConta criada para {titular}.")
+
+deposito = float(input("\nDigite o valor do depósito:\n"))
+
+
+saldo.append(deposito)
+historico.append(f"Depósito: R${deposito}")
+print(deposito)
+print(historico)
+
+if deposito > 0:
+    print(f"\nR$ {deposito} incluído na conta com sucesso.")
+else:
+    print("\nInsira um valor válido!\n")
+
+
+while True:   #isso poderia virar uma função?
+    print("\nMenu\n1 - Depósito\n2 - Saque\n3 - Consultar Saldo\n4 - Consultar Histórico\n0 - Sair\n\n")
+
+    opcoes = int(input("Escolha uma opção:\n"))
+   
+    if opcoes == 1:
+        novo_deposito = float(input("\nDigite o valor do depósito:\n"))
+        if novo_deposito > 0:
+            print(f"\nR$ {novo_deposito} incluído na conta com sucesso.")
+            saldo.append(novo_deposito)
+            historico.append(f"Depósito: R${novo_deposito}.")
+        else:
+            print("\nInsira um valor válido!\n")
+    elif opcoes == 2:
+        saque = float(input("\nDigite o valor do saque:\nR$ "))
+        if saque > sum(saldo):
+            print("\nSaldo Insuficiente.\n")
+            continue
+        else:
+            saldo.append(-saque)
+            historico.append(f"Saque de: {-saque}")
+            print(f"\nO valor do seu saque é: R$ {saque}.\nAguarde alguns segundos e retire o valor na saída indicada.\n")
+    elif opcoes == 3:
+        print(f"\nSaldo atual da sua conta é: R$ {sum(saldo)}.\n")
+    elif opcoes == 4:
+        for i in historico:
+            print(f"\nHistórico da sua conta\n\n{historico}")
+    elif opcoes == 0:
+        print("")
+        print(30*"*")
+        print("Obrigado por escolher o SeuBank!\n\nTenha um ótimo dia!")
+        print(30*"*")
+        break
+    else:
+        print("Opção inválida tente novamente.")
+        continue
+    
