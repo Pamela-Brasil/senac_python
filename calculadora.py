@@ -18,6 +18,8 @@ def multiplicacao(primeiro_numero,segundo_numero):
     return primeiro_numero * segundo_numero
 
 def divisao(primeiro_numero,segundo_numero):
+    if segundo_numero == 0:
+        return "Erro: divisão por zero não é permitida."
     return primeiro_numero / segundo_numero
 
 if operacao == 1:
